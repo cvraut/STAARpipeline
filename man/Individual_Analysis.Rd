@@ -14,7 +14,8 @@ Individual_Analysis(
   subset_variants_num = 5000,
   QC_label = "annotation/filter",
   variant_type = c("variant", "SNV", "Indel"),
-  geno_missing_imputation = c("mean", "minor")
+  geno_missing_imputation = c("mean", "minor"),
+  pheno_id_as_char = TRUE
 )
 }
 \arguments{
@@ -39,6 +40,8 @@ defining individual variants (default = 20).}
 \item{variant_type}{type of variant included in the analysis. Choices include "variant", "SNV", or "Indel" (default = "variant").}
 
 \item{geno_missing_imputation}{method of handling missing genotypes. Either "mean" or "minor" (default = "mean").}
+
+\item{pheno_id_as_char}{whether the phenotype IDs are character (default = TRUE).}
 }
 \value{
 a data frame containing the score test p-value and the estimated effect size of the minor allele for each individual variant in the given genetic region.
